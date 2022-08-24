@@ -1,0 +1,60 @@
+.menu {
+  display: block;
+  justify-content: space-between;
+  width: 90%;
+
+  .Links {
+    gap: 60px;
+    display: block;
+    margin-top: 25px;
+    .Link {
+      font-size: 20px;
+      transition: all 0.3s;
+      opacity: 0.8;
+      border-left: solid 1px black;
+
+      &:hover {
+        transition: all 0.3s;
+        margin-left: 20px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .bshouse {
+    font-size: 30px;
+    margin-top: 25px;
+    border-color: #000;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+.burger {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  z-index: 1000;
+  background-color:white;
+  text-align: center;
+  display: block;
+  justify-content: center;
+}
+.block {
+  display: none;
+}
+@media screen and (max-width: 824px) {
+  .block {
+    display: block;
+  }
+}
+.logo_burger {
+  display: flex;
+ 
+  justify-content: space-around;
+}
+.BiMenu{
+ margin-top: 15px;
+    font-size: 40px;
+}

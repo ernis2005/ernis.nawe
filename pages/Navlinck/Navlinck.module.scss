@@ -1,0 +1,69 @@
+.header {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  gap: 70px;
+  overflow: hidden;
+  text-transform: capitalize;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+    .Links {
+      gap: 60px;
+      display: flex;
+      margin-top: 25px;
+      .Link {
+        font-size: 20px;
+        transition: all 0.3s;
+        opacity: 0.8;
+        &:hover {
+          transition: all 0.3s;
+          border-bottom: solid 1px black;
+          opacity: 1;
+        }
+      }
+    }
+
+    .bshouse {
+      font-size: 30px;
+      margin-top: 25px;
+      border-color: #000;
+      
+        &:hover {
+  color: red;
+        }
+      
+    }
+  }
+}
+.content{
+  max-width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: block;
+  
+}
+.Burger{
+  display: none;
+}
+
+@media screen  and (max-width:824px){
+  .menu{
+   margin-top: -50000px;
+ 
+    display: none;
+  }
+  .Burger{
+    display: block;
+  }
+}
+.s{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
