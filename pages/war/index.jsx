@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { getSession } from "next-auth/react";
 import s from "./style.module.css";
-function Sports({ data }) {
+function War({ data }) {
  
  
   return (
@@ -14,7 +14,7 @@ function Sports({ data }) {
           return (
             <div className={s.news_card} key={rest.id}>
               <a
-                href={`/sport/${rest.id}`}
+                href={`/war/${rest.id}`}
                 className={s.news_card__card_link}
               ></a>
               <img
@@ -32,7 +32,7 @@ function Sports({ data }) {
                   <p className={s.news_card__excerpt}>
                     {rest.attributes.short_information}
                   </p>
-                  <Link href={`/sport/${rest.id}`}>
+                  <Link href={`/war/${rest.id}`}>
                     <a className={s.news_card__read_more}>Read more</a>
                   </Link>
                 </div>
@@ -45,7 +45,7 @@ function Sports({ data }) {
   );
 }
 
-export default Sports;
+export default War;
 
 //http://localhost:1337/api/sports?populate=*
 
@@ -53,7 +53,7 @@ export async function getStaticProps() {
   //
 
   const res = await axios.get(
-    "https://shrouded-reef-97416.herokuapp.com/api/sports?populate=*"
+    "https://shrouded-reef-97416.herokuapp.com/api/wars?populate=*"
   );
 
   let data = res.data.data;

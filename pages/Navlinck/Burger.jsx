@@ -26,10 +26,10 @@ function Burger() {
               <Link href="/sport">
                 <p className={s.Link}>sport</p>
               </Link>
-              <Link href="/">
+              <Link href="/fashion">
                 <p className={s.Link}>Fashion</p>
               </Link>
-              <Link href="/">
+              <Link href="/war">
                 <p className={s.Link}>War</p>
               </Link>
             </div>

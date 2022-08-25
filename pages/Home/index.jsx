@@ -9,8 +9,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import {  Autoplay } from "swiper";
+import War from "../war";
+import Fashion from "../Fashion";
 
-function Home({ data, data2 }) {
+function Home({ data, data2 ,data3,data4}) {
   console.log(data2);
   return (
     <div>
@@ -53,6 +55,10 @@ function Home({ data, data2 }) {
         })}
         <hr />
       </Swiper>
+      <Fashion data={data4}/>
+      <hr />
+      <War data={data3}/>
+      <hr />
       <Sports data={data} />
     </div>
   );
@@ -66,12 +72,24 @@ export async function getStaticProps() {
   const res2 = await axios.get(
     "https://shrouded-reef-97416.herokuapp.com/api/sport-swipers?populate=*"
   );
+  const res3 = await axios.get(
+    "https://shrouded-reef-97416.herokuapp.com/api/wars?populate=*"
+  );
+  const res4 = await axios.get(
+    "https://shrouded-reef-97416.herokuapp.com/api/fashions?populate=*"
+  );
+
   let data = res.data.data;
   let data2 = res2.data.data;
+  let data3 = res3.data.data;
+  let data4 = res4.data.data;
   return {
     props: {
       data,
       data2,
+      data3,
+      data4
+
     },
     revalidate: 200,
   };

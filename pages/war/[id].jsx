@@ -82,7 +82,7 @@ export default function srortPage({ data,data2 }) {
               <p className={s.news_card__excerpt}>
                 {rest.attributes.short_information}
               </p>
-              <Link href={`/sport/${rest.id}`}>
+              <Link href={`/war/${rest.id}`}>
                 <a className={s.news_card__read_more}>Read more</a>
               </Link>
             </div>
@@ -101,7 +101,7 @@ export default function srortPage({ data,data2 }) {
 export async function getStaticPaths() {
 
   const res = await axios.get(
-    "https://shrouded-reef-97416.herokuapp.com/api/sports?/populate=* "
+    "https://shrouded-reef-97416.herokuapp.com/api/wars?/populate=* "
   );
   let paths = res.data.data.map((res) => {
     return {
@@ -115,12 +115,12 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps({ params: { id } }) {
   const res2 = await axios.get(
-    "https://shrouded-reef-97416.herokuapp.com/api/sports?populate=*"
+    "https://shrouded-reef-97416.herokuapp.com/api/wars?populate=*"
   );
   let data2 = res2.data.data;
 
   const res = await axios.get(
-    `https://shrouded-reef-97416.herokuapp.com/api/sports/${id}?populate=*`
+    `https://shrouded-reef-97416.herokuapp.com/api/wars/${id}?populate=*`
   );
   let data = res.data.data;
   return {
