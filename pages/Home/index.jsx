@@ -8,11 +8,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import {  Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 import War from "../war";
 import Fashion from "../Fashion";
 
-function Home({ data, data2 ,data3,data4}) {
+function Home({ data, data2, data3, data4 }) {
   console.log(data2);
   return (
     <div>
@@ -38,26 +38,22 @@ function Home({ data, data2 ,data3,data4}) {
       >
         {data2.map((res) => {
           return (
-           
-              <SwiperSlide   key={res.id}>
-                <div className={s.contetn}>
+            <SwiperSlide key={res.id}>
+              <div className={s.contetn}>
                 <img
                   className={s.img}
                   src={res.attributes.img.data[0].attributes.url}
-                  
                 />
                 <h1 className={s.h1}>{res.attributes.info}</h1>
-                </div>
-             
-              </SwiperSlide>
-         
+              </div>
+            </SwiperSlide>
           );
         })}
         <hr />
       </Swiper>
-      <Fashion data={data4}/>
+      <Fashion data={data4} />
       <hr />
-      <War data={data3}/>
+      <War data={data3} />
       <hr />
       <Sports data={data} />
     </div>
@@ -68,7 +64,9 @@ export default Home;
 export async function getStaticProps() {
   //
 
-  const res = await axios.get("https://shrouded-reef-97416.herokuapp.com/api/sports?populate=*");
+  const res = await axios.get(
+    "https://shrouded-reef-97416.herokuapp.com/api/sports?populate=*"
+  );
   const res2 = await axios.get(
     "https://shrouded-reef-97416.herokuapp.com/api/sport-swipers?populate=*"
   );
@@ -88,8 +86,7 @@ export async function getStaticProps() {
       data,
       data2,
       data3,
-      data4
-
+      data4,
     },
     revalidate: 200,
   };
