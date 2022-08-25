@@ -12,6 +12,7 @@ import { Autoplay } from "swiper";
 import War from "../war";
 import Fashion from "../Fashion";
 
+
 function Home({ data, data2, data3, data4 }) {
   console.log(data2);
   return (
