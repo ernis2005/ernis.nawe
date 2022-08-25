@@ -25,7 +25,7 @@ function Navlinck({ children }) {
               <p className={s.Link}>Fashion</p>
             </Link>
             <Link href="/">
-              <p className={s.Link}>Blog Post</p>
+              <p className={s.Link}>War</p>
             </Link>
           </div>
           <div className={s.user}>

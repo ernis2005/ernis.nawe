@@ -2,14 +2,10 @@ import axios from "axios";
 import Link from "next/link";
 import React from "react";
 
-
 import s from "./style.module.css";
-function Sports({ data, }) {
-  
+function Sports({ data }) {
   return (
     <div>
-     
-
       <div className={s.content_wrapper}>
         {data.map((rest) => {
           return (
@@ -23,7 +19,7 @@ function Sports({ data, }) {
                 alt="img"
                 className={s.news_card__image}
               />
-          
+
               <div className={s.news_card__text_wrapper}>
                 <h2 className={s.news_card__title}>{rest.attributes.name}</h2>
                 <div className={s.news_card__post_date}>
@@ -52,16 +48,15 @@ export default Sports;
 export async function getStaticProps() {
   //
 
-  const res = await axios.get("https://shrouded-reef-97416.herokuapp.com/api/sports?populate=*");
-  const res2 = await axios.get(
-    "https://shrouded-reef-97416.herokuapp.com/api/sport-swipers?populate=*"
+  const res = await axios.get(
+    "https://shrouded-reef-97416.herokuapp.com/api/sports?populate=*"
   );
+
   let data = res.data.data;
-  let data2 = res2.data.data;
+
   return {
     props: {
       data,
-      data2,
     },
     revalidate: 200,
   };
