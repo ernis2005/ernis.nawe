@@ -66,7 +66,7 @@ export default function fashionPage({ data,data2 }) {
             <SwiperSlide>
           <div><div className={s.news_card} key={rest.id}>
           <a
-            href={`/sport/${rest.id}`}
+            href={`/fashion/${rest.id}`}
             className={s.news_card__card_link}
           ></a>
           <img
