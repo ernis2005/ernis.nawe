@@ -101,7 +101,7 @@ export default function srortPage({ data,data2 }) {
 export async function getStaticPaths() {
 
   const res = await axios.get(
-    "https://shrouded-reef-97416.herokuapp.com/api/sports?/populate=* "
+    "https://shrouded-reef-97416.herokuapp.com/api/sports?populate=*"
   );
   let paths = res.data.data.map((res) => {
     return {

@@ -101,9 +101,8 @@ export default function fashionPage({ data,data2 }) {
   );
 }
 export async function getStaticPaths() {
-
   const res = await axios.get(
-    "https://shrouded-reef-97416.herokuapp.com/api/fashions?/populate=* "
+    "https://shrouded-reef-97416.herokuapp.com/api/fashions?/populate=*"
   );
   let paths = res.data.data.map((res) => {
     return {
