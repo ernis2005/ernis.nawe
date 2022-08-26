@@ -7,9 +7,12 @@
   text-transform: capitalize;
   .menu {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-
+    justify-content: space-around;
+    width: 100%;
+    color: #fff;
+    z-index: 10000;
+position: fixed;
+background-color: #000;
     .Links {
       gap: 60px;
       display: flex;
@@ -45,7 +48,7 @@
   align-items: center;
   margin: auto;
   display: block;
-  
+  margin-top: 100px;
 }
 .Burger{
   display: none;
@@ -66,4 +69,47 @@
   width: 50px;
   height: 50px;
   background-color: black;
+}
+
+.footer{
+  max-width: 100%;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  margin: auto;
+  display: flex;
+  background-color: black;
+padding-bottom: 50px;
+
+padding-top: 50px;
+&div{
+  margin-top: 20px;
+text-align: center;
+}
+.co_link{
+  display: flex;
+  gap: 50px;
+  margin-left: 100px;
+}
+}
+
+@media screen and (max-width:530px ) {
+  .footer{
+    text-align: center;
+    display: block;
+   
+    
+  }
+  .block_4{
+  
+    display: block;
+ ;
+    text-align: center;
+    
+    margin-left: 100px;
+h1{
+  margin-left: -40px;
+}
+  }
 }

@@ -13,7 +13,7 @@ import War from "../war";
 
 
 
-function Home({ data, data2, data3, data4 }) {
+function Home({ data, data2, data3,  }) {
   console.log(data2);
   return (
     <div>
@@ -54,8 +54,10 @@ function Home({ data, data2, data3, data4 }) {
       </Swiper>
     
       <hr />
+      <h1>War</h1>
       <War data={data3} />
       <hr />
+      <h1>Sports</h1>
       <Sports data={data} />
     </div>
   );
