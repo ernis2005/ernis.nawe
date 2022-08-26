@@ -61,7 +61,7 @@ export default function srortPage({ data,data2 }) {
       >
         {data2.map((rest) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={rest.id}>
           <div><div className={s.news_card} key={rest.id}>
           <a
             href={`/sport/${rest.id}`}

@@ -63,7 +63,7 @@ export default function fashionPage({ data,data2 }) {
       >
         {data2.map((rest) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={rest.id}>
           <div><div className={s.news_card} key={rest.id}>
           <a
             href={`/fashion/${rest.id}`}

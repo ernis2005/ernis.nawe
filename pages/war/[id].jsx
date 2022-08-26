@@ -13,7 +13,6 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination,FreeMode } from "swiper";
 export default function srortPage({ data,data2 }) {
-  console.log(data2);
   //attributes.short_information
   return (
     <>
@@ -61,7 +60,7 @@ export default function srortPage({ data,data2 }) {
       >
         {data2.map((rest) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={rest.id}>
           <div><div className={s.news_card} key={rest.id}>
           <a
             href={`/sport/${rest.id}`}
@@ -128,6 +127,6 @@ export async function getStaticProps({ params: { id } }) {
       data2,
       data,
     },
-    revalidate: 2,
+    revalidate: 200,
   };
 }

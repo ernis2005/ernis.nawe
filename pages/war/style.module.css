@@ -176,6 +176,14 @@
     display: block;
     justify-content: center;
   }
+  .img2{
+    text-align: center;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+  }
   
   @media screen and (max-width: 991px) {
     .block div {
