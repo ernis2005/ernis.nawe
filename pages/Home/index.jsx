@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 import { Autoplay } from "swiper";
 import War from "../war";
-import Fashion from "../Fashion";
+
 
 
 function Home({ data, data2, data3, data4 }) {
@@ -52,7 +52,7 @@ function Home({ data, data2, data3, data4 }) {
         })}
         <hr />
       </Swiper>
-      <Fashion data={data4} />
+    
       <hr />
       <War data={data3} />
       <hr />
