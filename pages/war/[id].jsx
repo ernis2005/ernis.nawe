@@ -63,7 +63,7 @@ export default function srortPage({ data,data2 }) {
             <SwiperSlide key={rest.id}>
           <div><div className={s.news_card} key={rest.id}>
           <a
-            href={`/sport/${rest.id}`}
+            href={`/war/${rest.id}`}
             className={s.news_card__card_link}
           ></a>
           <img
