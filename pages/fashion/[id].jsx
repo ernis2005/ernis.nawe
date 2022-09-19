@@ -107,19 +107,22 @@ export async function getStaticPaths() {
   let paths = res.data.data.map((res) => {
     return {
       params: { id: String(res.id) },
+      revalidate: 2
     };
+  
   });
   return {
     paths,
     fallback: false,
   };
+  
+
 }
 export async function getStaticProps({ params: { id } }) {
   const res2 = await axios.get(
     "https://shrouded-reef-97416.herokuapp.com/api/fashions?populate=*"
   );
   let data2 = res2.data.data;
-
   const res = await axios.get(
     `https://shrouded-reef-97416.herokuapp.com/api/fashions/${id}?populate=*`
   );
