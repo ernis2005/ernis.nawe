@@ -106,7 +106,6 @@ export async function getStaticPaths() {
   let paths = res.data.data.map((res) => {
     return {
       params: { id: String(res.id) },
-      revalidate: 2
     };
   });
   return {
